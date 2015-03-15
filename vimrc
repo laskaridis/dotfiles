@@ -1,5 +1,6 @@
 set nocompatible
 
+filetype on
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -30,11 +31,11 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-fugitive'
 " Run specs form vim
 Plugin 'thoughtbot/vim-rspec'
+" Go language support
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
-
-colorscheme railscasts
 
 set number
 set numberwidth=5
@@ -64,10 +65,12 @@ set splitright
 set textwidth=120
 set colorcolumn=+1
 
+colorscheme railscasts
+
 let mapleader = " "
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
+" set list listchars=tab:.>>,trail:·,nbsp:·
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
@@ -112,7 +115,36 @@ augroup vimrcEx
      \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal g`\"" |
      \ endif
+
+  " Set syntax highlighting for specific file types
+  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
+
+  " Enable spellchecking for Markdown
+  autocmd FileType markdown setlocal spell
+
+  " Automatically wrap at 80 characters for Markdown
+  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
+  " Automatically wrap at 72 characters and spell check git commit messages
+  autocmd FileType gitcommit setlocal textwidth=72
+  autocmd FileType gitcommit setlocal spell
+
+  " Allow stylesheets to autocomplete hyphenated words
+  autocmd FileType css,scss,sass setlocal iskeyword+=-
 augroup END
+
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
 " Tab completion
 " will insert tab at beginning of line,
@@ -140,6 +172,9 @@ map <Leader>ct :!ctags -R .<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
+
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
