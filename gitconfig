@@ -1,9 +1,9 @@
 [color]
   ui = auto
 [user]
-	email = lefteris.laskaridis@gmail.com
-	name = Lefteris Laskaridis
+  email = lefteris.laskaridis@gmail.com
+  name = Lefteris Laskaridis
 [alias]
-	unstage = reset HEAD
+  unstage = reset HEAD
 [core]
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
