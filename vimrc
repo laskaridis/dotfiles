@@ -108,6 +108,9 @@ map <Leader><right> gt
 map <Leader><up> [m
 map <Leader><down> ]m
 
+" Unhighlight search
+map <Leader>h :nohlsearch<cr>
+
 augroup vimrcEx
   autocmd!
 
@@ -163,6 +166,16 @@ function! InsertTabWrapper()
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
+
+" Relative numbers toggle
+function! NumberToggle()
+  if &relativenumber == 1
+    set number
+  else
+    set relativenumber
+  endif
+endfunction
+nnoremap <Leader>q :call NumberToggle()<cr>
 
 " Always use vertical diffs
 set diffopt+=vertical
