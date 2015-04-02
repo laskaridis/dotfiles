@@ -196,6 +196,9 @@ let g:html_indent_tags = 'li\|p'
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
+" Include bundled gem tags
+set tags+=gems.tags
+
 " Enables % command to jump between kwywords module, def, do and
 " corresponding end.
 runtime macros/matchit.vim
