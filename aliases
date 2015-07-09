@@ -1,0 +1,11 @@
+
+# shell
+alias l='ls'
+alias ll='ls -la'
+alias tl="tail -f"
+alias path="echo $PATH | tr -s ':' '\n'"
+
+# ruby
+alias b="bundle"
+alias t="parallel_rspec spec/"
+
