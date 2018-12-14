@@ -85,9 +85,6 @@ set wildignore+=*/git/*
 let g:ctrlp_max_files = 0
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:25,results:25'
 
-" Tagbar mappings
-nmap <F8> :TagbarToggle<CR>
-
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
