@@ -66,6 +66,7 @@ set nobackup
 set nowritebackup
 set incsearch
 set hlsearch
+set relativenumber
 
 set splitbelow
 set splitright
