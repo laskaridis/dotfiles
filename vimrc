@@ -9,6 +9,8 @@ Plugin 'gmarik/Vundle.vim'
 
 " Github theme
 Plugin 'croaky/vim-colors-github'
+" Railcasts theme
+Plugin 'jpo/vim-railscasts-theme'
 " Create missing directories when editing files
 Plugin 'pbrisbin/vim-mkdir'
 " Finder
