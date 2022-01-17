@@ -1,0 +1,54 @@
+
+
+set nocompatible
+
+filetype on
+filetype off
+
+set number
+set numberwidth=5
+set relativenumber
+
+set ruler
+set showcmd
+set tabstop=2
+set shiftwidth=2
+set shiftround
+set expandtab
+set noswapfile
+set history=50
+set backspace=2
+set autoindent
+set expandtab
+set smarttab
+set nowrap
+set laststatus=2
+set nobackup
+set nowritebackup
+set incsearch
+set hlsearch
+set relativenumber
+
+set splitbelow
+set splitright
+
+set textwidth=120
+set colorcolumn=+1
+
+let mapleader = " "
+
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" Tab movement
+map <Leader><left> gT
+map <Leader><right> gt
+
+" Method movement
+map <Leader><up> [m
+map <Leader><down> ]m
+
+syntax on
