@@ -46,6 +46,7 @@ call vundle#end()
 filetype plugin indent on
 
 set number
+set relativenumber
 set numberwidth=5
 
 set ruler
