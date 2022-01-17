@@ -7,3 +7,5 @@
   unstage = reset HEAD
 [core]
   excludesfile = ~/.gitignore_global
+[code]
+  editor = vim
