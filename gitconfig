@@ -5,7 +5,9 @@
   name = Lefteris Laskaridis
 [alias]
   unstage = reset HEAD
+  s = status
+  l = log --oneline
+  t = log --oneline --graph
 [core]
   excludesfile = ~/.gitignore_global
-[code]
   editor = vim
