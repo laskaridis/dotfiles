@@ -27,10 +27,10 @@ set nowritebackup
 set incsearch
 set hlsearch
 set relativenumber
-
 set splitbelow
 set splitright
-
+set visualbell
+set noerrorbells
 set textwidth=120
 set colorcolumn=+1
 
