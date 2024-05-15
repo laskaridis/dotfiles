@@ -172,7 +172,7 @@ set diffopt+=vertical
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 " Index ctags from any project, including those outside Rails
-map <Leader>ct :!ctags -R .<CR>
+map <Leader>ct :!ctags .<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
@@ -187,5 +187,7 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 " Enables % command to jump between kwywords module, def, do and
 " corresponding end.
 runtime macros/matchit.vim
+
+let g:rspec_command = "!bundle exec rspec --format documentation {spec}"
 
 syntax on

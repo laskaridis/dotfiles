@@ -2,12 +2,13 @@
   ui = auto
 [user]
   email = lefteris.laskaridis@gmail.com
-  name = Lefteris Laskaridis
+  name = Lefteris Laskaridis 
 [alias]
   unstage = reset HEAD
   s = status
   l = log --oneline
   t = log --oneline --graph
+  c = checkout
 [core]
   excludesfile = ~/.gitignore_global
   editor = vim
