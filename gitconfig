@@ -2,7 +2,7 @@
   ui = auto
 [user]
   email = lefteris.laskaridis@gmail.com
-  name = Lefteris Laskaridis 
+  name = Lefteris Laskaridis
 [alias]
   unstage = reset HEAD
   s = status
@@ -12,3 +12,5 @@
 [core]
   excludesfile = ~/.gitignore_global
   editor = vim
+[push]
+  autoSetupRemote = 1
